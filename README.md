@@ -59,14 +59,20 @@ jupyter lab --ip=0.0.0.0 --no-browser
 
 Код для выполнения первой части проекта находится в файле `recommendations.ipynb`. Изначально, это шаблон. Используйте его для выполнения первой части проекта.
 
+# Команды для начала работы
+
+python3 -m venv env_recsys_start
+. env_recsys_start/bin/activate
+pip install -r requirements.txt
+
 # Сервис рекомендаций
 
 Код сервиса рекомендаций находится в файле `recommendations_service.py`.
 
-<*укажите здесь необходимые шаги для запуска сервиса рекомендаций*>
+uvicorn recommendations_service:app --reload
 
 # Инструкции для тестирования сервиса
 
 Код для тестирования сервиса находится в файле `test_service.py`.
 
-<*укажите здесь необходимые шаги для тестирования сервиса рекомендаций*>
+python test_service.py > test_service.log
