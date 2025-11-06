@@ -76,3 +76,7 @@ uvicorn recommendations_service:app --reload
 Код для тестирования сервиса находится в файле `test_service.py`.
 
 python test_service.py > test_service.log
+
+# Стратегия смешивания
+
+Если на вход помимо user_id подаётся список недавней истории, алгоритм добавляет к рекомендациям похожие треки.
