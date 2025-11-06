@@ -11,7 +11,7 @@ def test_warm_no_history():
     print("Warm user:", r.json())
 
 def test_warm_with_history():
-    r = requests.get(BASE_URL, params={"user_id": 1000000, "history": [16078, 985364]})
+    r = requests.get(BASE_URL, params={"user_id": 1000001, "history": [99262, 589498]}) # есть персональные + онлайн-история
     print("Warm user with history:", r.json())
 
 if __name__ == "__main__":
